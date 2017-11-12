@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Comment.css";
 
 class Comment extends Component {
   handleDelete = () => {
@@ -7,15 +8,14 @@ class Comment extends Component {
   };
 
   render() {
-    const { text, id } = this.props;
+    const { text } = this.props;
     return (
       <li className="newsItem">
         <p>
           {text}
-          {id}
           <span
             onClick={this.handleDelete}
-            className="delete-button"
+            className="delete"
           >
             X
           </span>

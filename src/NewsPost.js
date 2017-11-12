@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { getNewId } from "./App";
 import Comment from "./Comment";
+import "./NewsPost.css";
 
 class NewsPost extends Component {
   //State
@@ -24,7 +25,7 @@ class NewsPost extends Component {
       const { commentInput, comments } = this.state;
       const newComment = {
         id: getNewId(),
-        value: commentInput
+        text: commentInput
       };
       this.setState({
         commentInput: "",
@@ -59,7 +60,7 @@ class NewsPost extends Component {
             <Comment
               key={comment.id}
               id={comment.id}
-              text={comment.value}
+              text={comment.text}
               onDelete={this.handleDelete}
             />
           ))}

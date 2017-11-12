@@ -27,7 +27,7 @@ class App extends Component {
       const { newsInput, news } = this.state;
       const newsPost = {
         id: getNewId(),
-        value: newsInput
+        text: newsInput
       };
       this.setState({
         newsInput: "",
@@ -49,7 +49,7 @@ class App extends Component {
         />
         <ul className="news-list">
           {news.map(post => (
-            <NewsPost key={post.id} text={post.value} />
+            <NewsPost key={post.id} text={post.text} />
           ))}
         </ul>
       </div>
